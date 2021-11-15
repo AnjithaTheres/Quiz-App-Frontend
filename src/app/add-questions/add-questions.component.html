@@ -1,0 +1,28 @@
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Question</span>
+    <input type="text" #question (keyup)="0" class="form-control" placeholder="Enter Question" aria-label="Question" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Option1</span>
+    <input type="text" #option1 (keyup)="0" class="form-control" placeholder="Enter Option1 " aria-label="option1" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Option 2</span>
+    <input type="text" #option2 (keyup)="0" class="form-control" placeholder="Enter Option2" aria-label="option2" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Option 3</span>
+    <input type="text" #option3 (keyup)="0" class="form-control" placeholder="Enter Option3" aria-label="option3" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Option 4</span>
+    <input type="text" #option4 (keyup)="0" class="form-control" placeholder="Enter Option4" aria-label="option4" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Correct Answer</span>
+        <input type="text" #answer (keyup)="0" class="form-control" placeholder="Enter Answer" aria-label="answer" aria-describedby="basic-addon1">
+      </div>
+    
+    <button class="btn btn-primary" (click)="addQuestion(question.value, option1.value, option2.value,option3.value,option4.value,answer.value)">Add Question</button>
+  </div>

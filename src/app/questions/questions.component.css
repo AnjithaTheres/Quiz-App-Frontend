@@ -1,0 +1,31 @@
+
+.card{
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  background-color: plum;
+  
+}
+li{
+  list-style-type:none;
+  background-color: transparent;
+  cursor:pointer;
+  margin: 10px 0;
+ 
+}
+li .card:hover{
+  border: 1px solid rgb(62, 62, 88);
+  
+}
+ol{
+  padding: 5px;
+}
+button {
+ margin-bottom: 8px;
+  margin-left: 800px;
+}
+.example-card {
+background-color: rgb(148, 199, 219);
+  max-height:-5cm;
+  margin-bottom: -6px
+  }

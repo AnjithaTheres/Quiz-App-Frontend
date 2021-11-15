@@ -1,0 +1,194 @@
+<nav class="navbar navbar-dark bg-dark mt-2">
+    <div class="container-fluid">
+      <a class="navbar-brand"><font color="green-900" aria-setsize="4">Questions!!</font></a>
+      <form class="d-flex">
+       
+        <button class="btn btn-outline-success" type="submit" (click)="onsubmit()">Add Question</button>
+      </form>
+    </div>
+  </nav>
+  
+  <div class="card ">
+    <!-- <img src="../../assets/images.jpg" class="card-img"> -->
+    <!-- <div class="card-img-overlay">  -->
+        
+  <li *ngFor="let question of questions;let i=index" class="mt20">
+      <mat-card class="example-card">
+       
+  <p>
+          <b> {{i+1}})</b>
+          <span class="ml30"[innerHTML]="question.question"></span>
+      </p>
+ 
+        <!-- <div class="d-flex-justify-content-between py-3">
+            <div class="score"></div>
+            <div class="question-remain"></div>
+        </div> -->
+        <!-- <div class="card">
+        <ng-template ngFor let-question [ngForOf]="questions"  >   
+            <ul class="nav">                    
+<div class="card mt-3" >
+    <h3>{{question.question}}</h3>
+</div> -->
+ <button type="delete question" (click)="deleteQuestion(question.id)"  class="btn btn-danger btn-sm"> Delete</button> 
+      
+</mat-card>
+
+ <!-- <button (click)="deleteQuestion(question.id)" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button> -->
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="question.givenAnswer">
+  <li>
+  <mat-radio-button class="example-radio-button" [value]="question.option1">
+    {{question.option1}}
+  </mat-radio-button></li>
+<li>
+  <mat-radio-button class="example-radio-button" [value]="question.option2">
+    {{question.option2}}
+  </mat-radio-button></li>
+  <li>
+  <mat-radio-button class="example-radio-button" [value]="question.option3">
+    {{question.option3}}
+  </mat-radio-button></li>
+  <li>
+  <mat-radio-button class="example-radio-button" [value]="question.option4">
+    {{question.option4}}
+  </mat-radio-button></li>
+</mat-radio-group>
+      
+
+    <!-- <mat-radio-group aria-label="Select an option"> -->
+        
+
+        
+        <!-- <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <p><input type="radio" id="option1" >{{ question.option1 }}</p>
+              </div>
+              <div class="col-md-6">
+                <p><input type="radio" id="option2">{{ question.option2 }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><input type="radio" id="option3"> {{ question.option3 }}</p>
+              </div>
+              <div class="col-md-6">
+                <p><input type="radio" id="option4">{{ question.option4 }}</p>
+              </div>
+            </div> -->
+        
+  
+  </div>
+  
+<!-- <ol>
+    
+    <li >
+       <div class="card">
+        <div class="col-md-8">
+        <input
+        class="form-check-input"
+        type="radio"
+        name="flexRadioDefault"
+        [value]="question.option1"
+    [(ngModel)]="question.givenAnswer"
+                />{{ question.option1 }}
+              </div>
+       </div> 
+    </li>
+    <li >
+        <div class="card">
+            <div class="col-md-8">
+            <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            [value]="question.option2"
+            [(ngModel)]="question.givenAnswer"
+          />{{ question.option2}}  
+        </div> 
+    </div>
+     </li >
+     <li >
+        <div class="card">
+            <div class="col-md-8">
+            <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            [value]="question.option3"
+          [(ngModel)]="question.givenAnswer"
+          />{{ question.option3 }}  
+        </div> 
+    </div>
+     </li >
+     <li >
+        <div class="card">
+            <div class="col-md-8">
+            <input 
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            [value]="question.option4"
+            [(ngModel)]="question.givenAnswer" />
+            {{ question.option4 }}
+        </div> 
+    </div>
+     </li>
+  
+</ol> -->
+
+
+
+<!-- </mat-radio-group> -->
+<!-- <nav class="navbar navbar-light bg-light mt-4">
+<div class="d-grid gap-3 d-md-block">
+ 
+
+
+
+<button type="previous"(click)="previousQuestion()" class="btn btn-danger btn-lg float-left me-md-2"> previous</button> 
+<button type="submit" (click)="nextQuestion()" class="btn btn-primary btn-lg float-end " >Next</button> -->
+
+<!-- </nav> -->
+
+
+
+<!-- </ng-template> -->
+<!-- </div> -->
+<!-- </li> -->
+    <!-- </div> -->
+   
+
+<!-- <nav class="navbar navbar-light bg-light">
+    <form class="d-flex"> -->
+
+    <button (click)="submitQuiz()" mat-raised-button color="primary">
+      Submit Quiz
+    </button>
+
+    <!-- </form>
+</nav> -->
+<mat-card>
+    <div class="bootstrap-wrapper" *ngIf="isSubmit">
+        <div class="row mt20">
+          <div class="col-md-6 offset-md-3">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title> Quiz Result </mat-card-title>
+              </mat-card-header>
+              <mat-card-content class="text-center">
+                <h1>Marks Got : {{ marksGot }}</h1>
+                <h1>Correct Answers : {{ correctAnswers }}</h1>
+             
+              </mat-card-content>
+              
+            </mat-card>
+          </div>
+        </div>
+
+
