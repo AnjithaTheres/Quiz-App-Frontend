@@ -34,21 +34,21 @@ pipeline {
         }
         }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                bat 'npm test'
-            }
-          post{ 
-          success{
-             slackSend message : 'Successfully tested'
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//                 bat 'npm test'
+//             }
+//           post{ 
+//           success{
+//              slackSend message : 'Successfully tested'
        
-            }
-          failure {
-           slackSend message : 'Testing failed'
-        }
-        }
-        }
+//             }
+//           failure {
+//            slackSend message : 'Testing failed'
+//         }
+//         }
+//         }
         stage('Package') {
             steps {
                 echo 'npm build'
