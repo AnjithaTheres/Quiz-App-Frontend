@@ -10,7 +10,7 @@ import { QuestionService } from '../question.service';
 export class AddQuestionsComponent implements OnInit {
 
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService,private router:Router) { }
   ngOnInit(): void {
    
   }
@@ -20,6 +20,7 @@ export class AddQuestionsComponent implements OnInit {
       this.questionService.addQuestion({question,option1,option2,option3,option4,answer})
       .subscribe((res: any) => {
         console.log(res);
+        this.router.navigate(["/questions"]);
         // this.courses = res;
       });
     }
